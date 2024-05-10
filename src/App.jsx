@@ -1,23 +1,22 @@
+import { BrowserRouter,Routes,Route } from 'react-router-dom'
+
 import './App.css'
-import Vrf from './components/CardVrf/Vrf'
-import Header from './components/Header/Header'
+import { Register, AirVrf } from './pages'
+
 
 function App() {
 
   return (
     <>
-    
-        <Header />
-        <div className='container_principal'>
-        <Vrf />
-        <Vrf/>
-        <Vrf/>
-        <Vrf />
-        <Vrf />
-      </div>
-      <footer className="">
-        Este desarrollo es netamente practico para pruebas
-      </footer>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Register />}/>
+        <Route path='/vrf' element={<AirVrf/>}/>
+      </Routes>
+    </BrowserRouter>
+        
+        
+      
     </>
   )
 }
