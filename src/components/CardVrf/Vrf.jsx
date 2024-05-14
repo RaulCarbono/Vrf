@@ -2,6 +2,19 @@ import style from "./cardVrf.module.css";
 
 
 const Vrf = () => {
+
+  const getVrf = async() => {
+    const url = 'http://10.0.5.106:3001/api/v1/unit/customer/2'
+    const resp = await fetch( url, {
+      method:'get',
+      headers: {'apiKey' :"integrationVrf"}
+    } )
+
+    console.log(resp);
+  }
+
+  getVrf()
+
   return (
     <div className={style.card_container}>
       <div className={style.title_card}> soy el primer termostato</div>
