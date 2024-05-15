@@ -1,23 +1,30 @@
+import { useState, useEffect } from "react";
+import { getVrf } from "../../helpers/getVrf";
 import style from "./cardVrf.module.css";
 
 
+
 const Vrf = () => {
+  const [data, setData] = useState([]);
 
-  const getVrf = async() => {
-    const url = 'http://10.0.5.106:3001/api/v1/unit/customer/2'
-    const resp = await fetch( url, {
-      method:'get',
-      headers: {'apiKey' :"integrationVrf"}
-    } )
-
-    console.log(resp);
+  const getData = async() => {
+    const newData = await getVrf();
+    setData(newData)
   }
+  
+  useEffect(() => {
+    getData()
+}, [])
 
-  getVrf()
+console.log(data)
 
+  
+  
   return (
-    <div className={style.card_container}>
-      <div className={style.title_card}> soy el primer termostato</div>
+    <>
+    <div className={style.container}>
+    {data.map((i) => <div className={style.card_container}>
+      <div className={style.title_card}> {i.name}</div>
       <div className={style.display_card_container}>
         <div className={style.display}></div>
         <div className={style.buttons}>
@@ -30,7 +37,10 @@ const Vrf = () => {
         <div className={style.buttons_options}> <button className={style.button_option}>Cool</button><button className={style.button_option}>Heat</button></div>
          <div className={style.buttons_options}> <button className={style.button_option}>Fan</button><button className={style.button_option}>Off</button></div> 
         </div>
+    </div>)}
     </div>
+    </>
+    
   )
 }
 

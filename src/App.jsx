@@ -10,7 +10,7 @@ function App() {
     <>
     <BrowserRouter>
       <Routes>
-        <Route index element={<Register />}/>
+        <Route index element={<AirVrf />}/>
         <Route path='/vrf' element={<AirVrf/>}/>
       </Routes>
     </BrowserRouter>
