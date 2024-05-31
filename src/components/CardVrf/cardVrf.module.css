@@ -45,6 +45,22 @@
         border: solid 1px #014d669a;
         border-radius: 10px;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+        .displaySetpoint  {
+            display: flex;
+            font-size: 40px;
+            align-items: center;
+            justify-content: center;
+            color: rgb(97, 97, 97);
+        }
+
+        .displayTemperatureAmb {
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            font-size: 20px;
+            color: rgb(97, 97, 97);
+        }
     }
     
     .buttons {
