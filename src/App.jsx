@@ -1,7 +1,5 @@
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
-
-import './App.css'
-import { Register, AirVrf } from './pages'
+import { Register, AirVrf , CPrincipal} from './pages'
 
 
 function App() {
@@ -10,7 +8,7 @@ function App() {
     <>
     <BrowserRouter>
       <Routes>
-        <Route index element={<AirVrf />}/>
+        <Route index element={ <CPrincipal />}/>
         <Route path='/vrf' element={<AirVrf/>}/>
       </Routes>
     </BrowserRouter>

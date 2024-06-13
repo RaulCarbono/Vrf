@@ -1,14 +1,14 @@
-import styles from "../Header/header.module.css";
-import Register from "../Register/Register";
+import Vrf from "../CardVrf/Vrf"
 
 const Header = () => {
   return (
-    <>
-    <div className={styles.container_header}> 
-      <h1>Vrf</h1>
+
+    <div className="container_content">  
+    <div className="container_navbar"></div>
+     <Vrf />
     </div>
-    <Register />
-    </>
+
+   
   )
 }
 

@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { getVrf } from "../../helpers/getVrf";
-import style from "./cardVrf.module.css";
+
 
 const Vrf = () => {
   const [data, setData] = useState([]);
+  const [setPoint, setSetPoint] = useState({})
 
   const getData = async() => {
     const newData = await getVrf();
@@ -14,7 +15,9 @@ const Vrf = () => {
     getData()
 }, [])
 
-console.log(data)
+console.log(setPoint?.Setpoint)
+
+console.log(setPoint)
 const newSocket = new WebSocket('ws://10.0.5.101:3001/ws?apiKey=integrationVrf')
 
 useEffect(() => {
@@ -24,7 +27,8 @@ useEffect(() => {
   }
 
   newSocket.onmessage = (e) => {
-    console.log(e.data);
+    console.log(typeof(e.data) , e.data);
+    setSetPoint(JSON.parse(String(e?.data)))
   }
   
 
@@ -41,28 +45,28 @@ const send = () => {
     JSON.stringify({
       eventname:"setpoint",
       unitId:"65a0444165a3207a29eb353c",
-      value:26,
+      value:22,
       projectId:123
     })
   )
 }
   return (
     <>
-    <div className={style.container}>
-    {data.map((i) => <div className={style.card_container}>
-      <div className={style.title_card}> {i.name}</div>
-      <div className={style.display_card_container}>
-        <div className={style.display}><span className={style.displaySetpoint}>°{i.state.activeSetpoint}</span>
-        <span className={style.displayTemperatureAmb}> °{i.state.ambientTemperature}</span></div>
-        <div className={style.buttons}>
-            <button className={style.button_up_down} onClick={send}>up</button>
-            <button className={style.button_up_down}>down</button>
+    <div className={""}>
+    {data.map((i) => <div className={""}>
+      <div className={''}> {i.name}</div>
+      <div className={""}>
+        <div className={""}><span className={""}>°{String(setPoint?.Setpoint)}</span>
+        <span className={""}> °{setPoint?.AmbientTemperature}</span></div>
+        <div className={""}>
+            <button className={""} onClick={send}>up</button>
+            <button className={""}>down</button>
         </div>
        
       </div>
-      <div className={style.container_options}>
-        <div className={style.buttons_options}> <button className={style.button_option} >Cool</button><button className={style.button_option}>Heat</button></div>
-         <div className={style.buttons_options}> <button className={style.button_option}>Fan</button><button className={style.button_option}>Off</button></div> 
+      <div className={""}>
+        <div className={""}> <button className={""} >Cool</button><button className={""}>Heat</button></div>
+         <div className={""}> <button className={""}>Fan</button><button className={""}>Off</button></div> 
         </div>
     </div>)}
     </div>

@@ -1,4 +1,4 @@
-import style from './userregister.module.css';
+
 import Register from "../../components/Register/Register"
 
 
