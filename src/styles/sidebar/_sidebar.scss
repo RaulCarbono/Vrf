@@ -1,12 +1,12 @@
 .container_sidebar {
     box-sizing: border-box;
-    height: 100vh;
+    height: 100%;
     margin: 0%;
     background-color: $color_white_secondary;
     border-right: 1px solid rgba(#808080, 0.3);
 
     .container_header_sidebar {
-        height: 11.8%;
+        height: 4.8%;
     display: flex;
     justify-content: center;
 
@@ -20,13 +20,13 @@
 
 .sidebar_menu {
     display: flex;
-    height: 88%;
+    height: 100%;
    
     .menu{
         margin-top: 10px;
         box-sizing: border-box;
         display: grid;
-        height: 20%;
+        height: 180px;
         width: 100%;
        text-align: center;
     
@@ -43,7 +43,7 @@
     
     .container_option_project {
         margin: 0;
-        height: 60%;
+        height: 40%;
         display: flex;
         background-color: $color_green_principal;
         width: 100%;

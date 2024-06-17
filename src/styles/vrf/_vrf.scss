@@ -1,0 +1,87 @@
+.container_dispositivos {
+    display: grid;
+    grid-template-columns: repeat( 3 ,1fr);
+  align-items: center;
+    place-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    
+    .card_vrf {
+        box-sizing: border-box;
+        box-shadow: 1px 2px 1px 1px rgba(grey, 0.3);
+        margin-top: 10px;
+        margin-left: 5px;
+        width: 23rem;
+        height: 16rem;
+        border-radius: 15px;
+        
+        
+    .container_title_status {
+        grid-template-columns: 60% 20% 20%;
+        background-color: rgba($color: gray, $alpha: 0.1);
+        border-radius: 15px 15px 0px 0px;
+        height: 40px;
+        place-content: center;
+   
+   
+    .title_color {
+        justify-self: flex-start;
+        align-self: center;
+        font-size: 20px;
+        padding-left: 5%;
+    }
+    }
+}
+.container_temperature {
+    display: grid;
+    grid-template-columns: 60% 40%;
+
+    .temperatur_off {
+      background-color: rgba($color_grey_terceary, 0.5) !important;
+      border: 1px solid $color_grey_terceary !important;
+    }
+
+    .temperature {
+        margin-top: 5px;
+      font-family: $font_weather;
+      height: 90px;
+      font-size: 60px;
+      justify-self: center;
+      align-self: center;
+      border: 1px solid $color_blue_one;
+      background-color: rgba($color_blue_two, 0.3);
+      border-radius: 10px;
+      padding: 0 5px 5px 2.5px;
+
+      .temperature_style {
+        font-family: $font_weather;
+        margin-left: 20px;
+        color: $color_blue_three;
+      }
+
+      .temperatur_off_option {
+        color: $color_grey_four !important;
+      }
+      .temperature_ambient {
+        font-size: 28px;
+      }
+    }
+}
+.container_options_airs{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    
+
+    .container_up_down {
+        display: grid;
+        grid-template-rows: repeat(2,1fr);
+        margin-top: 10px;
+        height: 100%;
+        width: 100%;
+        padding: 0 5px 5px 2.5px;
+    }
+}
+
+}

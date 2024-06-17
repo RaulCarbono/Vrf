@@ -1,8 +1,17 @@
 body {
   margin: 0;
+  height: 100%;
+  width: 100%;;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 @import 'global/colors';
 @import 'principal/principal';
 @import 'sidebar/sidebar';
 @import 'header/header';
+@import 'vrf/vrf';
+
+@font-face {
+  font-family: 'Open24';
+  src: local('Open24'), url(./global/Open24.woff) format('woff');
+}
