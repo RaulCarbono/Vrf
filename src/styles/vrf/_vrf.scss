@@ -81,6 +81,21 @@
         height: 100%;
         width: 100%;
         padding: 0 5px 5px 2.5px;
+        
+    }
+
+    .button_up {
+        align-items: center;
+        width: 80%;
+        margin-bottom: 5px;
+        border: none;
+        background-color: #e0dede;
+    }
+    .button_down {
+        align-items: center;
+        width: 80%;
+        border: none;
+        background-color: #e0dede;
     }
 }
 

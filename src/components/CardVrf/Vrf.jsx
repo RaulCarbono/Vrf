@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { getVrf } from "../../helpers/getVrf";
+import arriba from "../../assets/arriba.png"
+import abajo from "../../assets/abajo.png"
 
 const newSocket = new WebSocket('ws://10.0.5.100:3001/ws?apiKey=integrationVrf')
 
@@ -62,8 +64,8 @@ const send = () => {
         </div>
         <div className="container_options_airs">
         <div className={"container_up_down"}>
-            <button className={""} onClick={send}>up</button>
-            <button className={""}>down</button>
+            <button className={"button_up"} onClick={send}><img src={arriba} /></button>
+            <button className={"button_down"}><img src={abajo}/></button>
         </div>
        
       
