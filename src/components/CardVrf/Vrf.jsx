@@ -60,18 +60,24 @@ const send = () => {
       <div className={"container_temperature"}>
         <div className={"temperature"}><span className={"temperature_style"}>°{i?.state?.activeSetpoint}</span>
         <span className={"temperature_ambient"}> °{i?.state.ambientTemperature}</span></div>
-        <div>fan</div>
+        <div></div>
         </div>
         <div className="container_options_airs">
         <div className={"container_up_down"}>
-            <button className={"button_up"} onClick={send}><img src={arriba} /></button>
-            <button className={"button_down"}><img src={abajo}/></button>
+            <button className={"button_up"} onClick={send}> <span className="__btn_up">
+              <i className="fas fa-chevron-up"></i>
+            </span></button>
+            <button className={"button_down"}> 
+                <span className="__btn_down">
+                  <i className="fas fa-chevron-down"></i>
+                </span>
+            </button>
         </div>
        
       
-      <div className={""}>
-        <div className={""}> <button className={""} >Cool</button><button className={""}>Heat</button></div>
-         <div className={""}> <button className={""}>Fan</button><button className={""}>Off</button></div> 
+      <div className={"container_button_options"}>
+         <button className={"buttons"} >Cool</button><button className={"buttons"}>Heat</button>
+          <button className={"buttons"}>Fan</button><button className={"buttons"}>Off</button>
         </div>
         </div>
     </div>)}

@@ -1,0 +1,16 @@
+
+{
+    "devices" : [
+        {
+            "Category" : {"id" : 22, "category" : "hvac", "sub_category" : "hvac"} ,
+            "name"  : "Aire Hab Ppal 04/06",
+            "visible" : true,
+            "variables" : { "items": [
+                {"items_id":"665f386a078fba14e4e21010", "name" : "thermostat_mode", "status":"off" },
+                {"items_id":"665f386b078fba14e4e21015", "name" : "temp", "status":{"value":28, "scale": "celcius"}},
+                {"items_id":"665f386b078fba14e4e21017", "name" : "thermostat_fan_mode", "status":"low" },
+                {"items_id":"665f386a078fba14e4e21010", "name" : "thermostat_mode", "status":"off" }
+                ]}
+      }
+    ]
+}
